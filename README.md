@@ -1,6 +1,6 @@
 # hangman-py-b
 hangman project in python.
-
+```
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -9,7 +9,7 @@ hangman project in python.
 |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                     __/ |                      
                    |___/    
-
+```
 ## Releasing v2.0
 
 check it for yourself!
