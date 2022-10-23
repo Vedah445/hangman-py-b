@@ -10,6 +10,6 @@ hangman project in python.
                     __/ |                      
                    |___/    
 ```
-## Releasing v2.0
+## v2.0 has been released!
 
 check it for yourself!
