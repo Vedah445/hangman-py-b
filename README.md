@@ -1,5 +1,15 @@
 # hangman-py-b
 hangman project in python.
 
-IT'S VERY VERY HARD
-MWAHAHAHAHHAHAHHAHAHHAHA
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    
+
+## Releasing v2.0
+
+check it for yourself!
