@@ -1,56 +1,45 @@
 import random
-import extractWords
+from intro import stages, logo
+import random_Words
+import os
 
 
-life = 3
-word = extractWords.getWords()
-new_word =  ["_" for i in range(len(word))]
+print(logo)
+life = len(stages) - 1
+word_list = random_Words.word_list
+chosen_word = random.choice(word_list)
+display = ["_" for i in chosen_word]
+a = random.randint(0, len(chosen_word) - 1)
+display[a] = chosen_word[a]
 
-def generateQuiz():
-    temp = list(word)
-    a = random.randint(1, len(temp) - 1) #2
-    for item in range(a):
-     pos_c = random.randint(0, len(temp) - 1)
-     temp[pos_c] = "_"
+
+print(display)
+print(stages[life])
+while "_" in display and life != 0:
+    inpute = input("say smthing: ")
     
+    os.system('cls')
     
-    return temp
+    if inpute in display:
+      print("you have already guessed")
+      print(display)
+      continue
     
+    for position in range(len(chosen_word)):
+      letter = chosen_word[position]
+      if letter == inpute:
+        display[position] = inpute
+
+    if inpute not in chosen_word:
+        life-=1
+        print(stages[life])
+        print("try again \t life remaining: ", life)
     
-new_word = generateQuiz()
-print("".join(new_word))
+    # os.system("cls")
+    print(" ".join(display))
 
-
-
-def getInputAndCheck_v2(life):
-    #"aardvark" .... "__r_dva_k"
-    while life != 0 and new_word.count("_") > 0:
-      print("life remaining: ", life)
-      inp = input("get input: ")
-      i = False
-      item = 0
-      for item in range(0, len(new_word)):
-       if word[item] == inp and new_word[item] == "_":
-         i = True
-         break
-      
-      if i == True:
-        new_word[item] = inp
-      else:
-          life-=1 
-      print("".join(new_word))
-    
-    return life
-
-a = getInputAndCheck_v2(life)
-
-if a != 0:
-  print("well done")
+if life == 0:
+  print("try again later")
+  print("the correct word was: " + chosen_word)
 else:
-    print("lol xd peasant")
-    
-
-    
-        
-    
-    
+    print("well done")
